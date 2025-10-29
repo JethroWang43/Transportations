@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,7 +29,7 @@
                                 <rect key="frame" x="274" y="52" width="438" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="AIR TRANSPO"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <segue destination="CXP-37-I1w" kind="show" id="W8S-Bv-uNG"/>
                                 </connections>
@@ -33,20 +38,41 @@
                                 <rect key="frame" x="120" y="661" width="433" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="WATER TRANSPO"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <segue destination="Ibf-10-3pA" kind="show" id="rZs-0W-gRm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goy-5m-QSd">
-                                <rect key="frame" x="605" y="866" width="419" height="226"/>
+                                <rect key="frame" x="605" y="866" width="419" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Land Transpo"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <segue destination="IgJ-g0-u24" kind="show" id="g71-j2-ra3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LAND TRANSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-U0-Wr2">
+                                <rect key="frame" x="596" y="1100" width="388" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WATER TRANSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-1X-i80">
+                                <rect key="frame" x="142" y="907" width="430" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AIR TRANSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROR-nk-HEY">
+                                <rect key="frame" x="312" y="293" width="347" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,13 +92,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NRu-dK-P6j">
-                                <rect key="frame" x="0.0" y="50" width="1024" height="51.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="81" id="NRu-dK-P6j">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NRu-dK-P6j" id="EQI-Su-UdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yacht-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="SkS-55-i16">
+                                            <rect key="frame" x="20" y="-1" width="78" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yacht" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-hX-dOJ">
+                                            <rect key="frame" x="124" y="25" width="61" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Oir-go-h9O" kind="show" id="HqV-iq-3cS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="82" id="Ukp-8k-fuu">
+                                <rect key="frame" x="0.0" y="131" width="1024" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ukp-8k-fuu" id="5Tb-02-87a">
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="82"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yakay" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-pU-nvO">
+                                            <rect key="frame" x="20" y="7" width="69" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kayak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJk-zW-dsf">
+                                            <rect key="frame" x="129" y="26" width="66" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rcx-pg-spO" kind="show" id="13J-u3-bl9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="96" id="zNQ-u9-fMK">
+                                <rect key="frame" x="0.0" y="213" width="1024" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zNQ-u9-fMK" id="cQj-EV-0se">
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jet-ski" translatesAutoresizingMaskIntoConstraints="NO" id="utb-9d-f20">
+                                            <rect key="frame" x="20" y="11" width="64" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jet Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyk-dm-2E1">
+                                            <rect key="frame" x="129" y="33" width="73" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="RHi-NX-Cyr" kind="show" id="MB9-w9-O4O"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -84,7 +174,121 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6x-Vs-gag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613" y="-81"/>
+            <point key="canvasLocation" x="1612.5" y="-81.259150805270863"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UhV-J2-AwM">
+            <objects>
+                <viewController id="Oir-go-h9O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38b-TN-Aye">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yacht-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="XxS-bs-Ycs">
+                                <rect key="frame" x="0.0" y="300" width="1012" height="785"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yacht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjX-1y-HcR">
+                                <rect key="frame" x="443" y="199" width="126" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wB0-rV-YlS">
+                                <rect key="frame" x="77" y="540" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A yacht is a luxurious boat designed for comfort, leisure, and long-distance travel on the sea. Yachts range from small sailing versions to massive motorized vessels equipped with bedrooms, dining areas, and even swimming pools. They are often used for private cruises, parties, and exclusive getaways, offering a sense of elegance and relaxation. Yachting symbolizes prestige, freedom, and the joy of exploring the open ocean in style.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rX7-er-0UY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="keY-in-Gei"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efA-Y9-p67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="-80"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gdy-nb-HQO">
+            <objects>
+                <viewController id="rcx-pg-spO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSU-Gd-uqU">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yakay" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-Ey-MJb">
+                                <rect key="frame" x="6" y="286" width="1012" height="785"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kayak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsO-Hn-aer">
+                                <rect key="frame" x="440" y="185" width="144" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UsN-Kj-MZ9">
+                                <rect key="frame" x="83" y="526" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A kayak is a small, narrow watercraft that is manually powered using a double-bladed paddle. It is often used for recreation, adventure sports, or exploring calm rivers, lakes, and coastal areas. Kayaks are known for their stability and maneuverability, allowing paddlers to get close to nature and enjoy peaceful waterscapes. They can be used solo or in pairs and are popular among those who love outdoor activities and eco-tourism.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ml0-9Z-f2A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0kv-5j-JtN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nn-n3-tmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988" y="-82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Klw-oq-bEU">
+            <objects>
+                <viewController id="RHi-NX-Cyr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EcW-1H-qoH">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jet-ski" translatesAutoresizingMaskIntoConstraints="NO" id="ni4-MZ-wFL">
+                                <rect key="frame" x="0.0" y="283" width="1012" height="785"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jet Ski" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeG-Km-mRo">
+                                <rect key="frame" x="432" y="182" width="149" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="7qb-sA-WhN">
+                                <rect key="frame" x="77" y="523" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A jet ski is a compact, motorized watercraft designed for speed and excitement on the water. It can accommodate one or two riders and is commonly used for leisure, sport, or short-distance coastal travel. Jet skis are driven by a powerful jet propulsion system that allows quick turns and fast acceleration, making them perfect for thrill-seekers. They are a favorite for beach resorts and recreational water activities.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="swF-dD-kT7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NK1-7x-YDx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0M1-dE-w9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3712" y="-76"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="UJa-Ah-12A">
@@ -95,13 +299,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ubb-ko-dgQ">
-                                <rect key="frame" x="0.0" y="50" width="1024" height="51.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="97" id="EUC-e3-yKL">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ubb-ko-dgQ" id="H4h-QN-PR4">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="51.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EUC-e3-yKL" id="V7K-IB-Zhh">
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="97"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="civic" translatesAutoresizingMaskIntoConstraints="NO" id="dDF-Yq-nWD">
+                                            <rect key="frame" x="20" y="7" width="78" height="83"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-2c-bhP">
+                                            <rect key="frame" x="128" y="33" width="39" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cwM-lq-3E0" kind="show" id="OHn-aM-Wya"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="93" id="Uki-kR-5sT">
+                                <rect key="frame" x="0.0" y="147" width="1024" height="93"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uki-kR-5sT" id="sF1-kH-dn6">
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="truck" translatesAutoresizingMaskIntoConstraints="NO" id="lvT-c8-cPu">
+                                            <rect key="frame" x="20" y="7" width="77" height="79"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edb-l2-1SA">
+                                            <rect key="frame" x="128" y="31" width="60" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dwX-jG-ihg" kind="show" id="JtO-i7-HVD"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="83" id="nts-Y0-ful">
+                                <rect key="frame" x="0.0" y="240" width="1024" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nts-Y0-ful" id="kLO-BF-d38">
+                                    <rect key="frame" x="0.0" y="0.0" width="993.5" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="g3V-Rx-eNh">
+                                            <rect key="frame" x="20" y="3" width="71" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bicycle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8y-1d-sff">
+                                            <rect key="frame" x="131" y="26" width="78" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="iMf-Gb-rbn" kind="show" id="Dbp-yT-JTV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -113,7 +381,121 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asu-i5-nuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613" y="689"/>
+            <point key="canvasLocation" x="1612.5" y="688.72620790629571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="psP-h3-9Qx">
+            <objects>
+                <viewController id="cwM-lq-3E0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmX-5O-8Lw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-uP-2Om">
+                                <rect key="frame" x="464" y="190" width="80" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Xol-Zi-Yjb">
+                                <rect key="frame" x="75" y="531" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A car is a four-wheeled motor vehicle designed primarily for personal or family transport. It provides comfort, speed, and convenience for everyday travel, whether for work, school, or leisure. Modern cars come equipped with advanced safety systems, air conditioning, and entertainment features that enhance the driving experience. Cars have revolutionized mobility, making travel faster and more flexible for millions around the world.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="civic" translatesAutoresizingMaskIntoConstraints="NO" id="ywO-0F-doB">
+                                <rect key="frame" x="-2" y="291" width="1012" height="785"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAz-fO-NjJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6f3-zX-fHl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ea-sN-j1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291.6015625" y="697.9502196193265"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nhR-J7-W58">
+            <objects>
+                <viewController id="dwX-jG-ihg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S7e-tj-tAa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsn-I2-EQj">
+                                <rect key="frame" x="443" y="179" width="130" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-Zy-T4A">
+                                <rect key="frame" x="79" y="520" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A truck is a large, powerful motor vehicle built to transport heavy goods and materials. Trucks play a vital role in industries such as logistics, construction, and agriculture, carrying products over long distances efficiently. They vary in size and capacity—from light-duty delivery trucks to massive 18-wheelers used for national freight. Their durability and strength make them essential for economic and commercial growth.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="truck" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-eh-Yn0">
+                                <rect key="frame" x="111" y="365" width="795" height="636"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fvx-DO-8vN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lsn-4O-hGE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkM-cm-LQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025.78125" y="707.61346998535862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QtJ-m1-khM">
+            <objects>
+                <viewController id="iMf-Gb-rbn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xo4-y2-zaB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bicycle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-OU-OIC">
+                                <rect key="frame" x="426" y="165" width="168" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-O7-4wV">
+                                <rect key="frame" x="81" y="506" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A bike, or bicycle, is a simple yet efficient two-wheeled vehicle powered by human pedaling. It is one of the most sustainable modes of transportation, producing zero emissions and promoting a healthy lifestyle. Bikes are ideal for short-distance travel, daily commuting, and recreational rides through parks or urban streets. In many cities, cycling has become a symbol of eco-friendly living and personal freedom.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-GF-CJV">
+                                <rect key="frame" x="81" y="305" width="866" height="756"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hpy-tc-NAP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Fe-He-QIt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhB-Fv-Sz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3731.8359374999995" y="712.88433382137623"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="EKB-3M-4C0">
@@ -126,68 +508,77 @@
                         <sections>
                             <tableViewSection id="4mv-4e-izr">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kDO-iY-0o0">
-                                        <rect key="frame" x="0.0" y="50" width="1024" height="51.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="78" id="kDO-iY-0o0">
+                                        <rect key="frame" x="0.0" y="50" width="1024" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kDO-iY-0o0" id="4Xb-4e-yzy">
-                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hot Air balloon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU2-8l-NiC">
-                                                    <rect key="frame" x="75" y="15" width="113" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airballon-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-UT-bHe">
+                                                    <rect key="frame" x="20" y="0.0" width="88" height="78"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hot Air balloon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU2-8l-NiC">
+                                                    <rect key="frame" x="129" y="24" width="159" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airballon-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-UT-bHe">
-                                                    <rect key="frame" x="20" y="0.0" width="47" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pxd-A8-sfZ" kind="show" id="Ljx-ov-hXt"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="o18-w1-6tI">
-                                        <rect key="frame" x="0.0" y="101.5" width="1024" height="51.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="79" id="o18-w1-6tI">
+                                        <rect key="frame" x="0.0" y="128" width="1024" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o18-w1-6tI" id="eD7-Wf-vN9">
-                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Md-oCG">
-                                                    <rect key="frame" x="69" y="15" width="42" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-nE-4lG">
+                                                    <rect key="frame" x="20" y="0.0" width="88" height="79"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Airplane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Md-oCG">
+                                                    <rect key="frame" x="131" y="24" width="198" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-nE-4lG">
-                                                    <rect key="frame" x="20" y="0.0" width="47" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lvk-Gd-ojQ" kind="show" id="VSD-my-rYv"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="MJ9-bk-SUR">
-                                        <rect key="frame" x="0.0" y="153" width="1024" height="51.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="92" id="MJ9-bk-SUR">
+                                        <rect key="frame" x="0.0" y="207" width="1024" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJ9-bk-SUR" id="BTb-5v-yUk">
-                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="51.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="993.5" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jet Plane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deT-W5-RwA">
-                                                    <rect key="frame" x="69" y="15" width="71" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jetplanne-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="FoM-2W-ozX">
+                                                    <rect key="frame" x="20" y="0.0" width="92" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jet Plane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deT-W5-RwA">
+                                                    <rect key="frame" x="131" y="23" width="99" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jetplanne-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="FoM-2W-ozX">
-                                                    <rect key="frame" x="20" y="0.0" width="47" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1mj-YR-mNx" kind="show" id="eZ0-gH-9Xc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -202,6 +593,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3c-rp-gUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612.5" y="-885.06588579795016"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V0g-yK-wMF">
+            <objects>
+                <viewController id="1mj-YR-mNx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qAi-yI-729">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Private Jet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bag-Hp-cZf">
+                                <rect key="frame" x="368" y="138" width="231" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qoZ-6i-8Nr">
+                                <rect key="frame" x="46" y="496" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">A private jet is an exclusive aircraft designed for personal, business, or luxury travel. It offers privacy, speed, and flexibility—allowing passengers to choose their destination, schedule, and onboard experience. Private jets often feature comfortable seating, gourmet catering, Wi-Fi, and entertainment systems. They are ideal for executives, celebrities, or anyone seeking convenience and comfort without the crowds of commercial flights. Flying by private jet represents efficiency and sophistication in air travel.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jetplanne-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-bW-kLb">
+                                <rect key="frame" x="-114" y="68" width="1331" height="1045"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="djn-kQ-KD1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9AZ-O2-mF7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11D-49-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3708" y="-873"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qMy-G1-E2s">
+            <objects>
+                <viewController id="lvk-Gd-ojQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IcM-yA-AlI">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="ATl-FM-e01">
+                                <rect key="frame" x="-99" y="219" width="1331" height="1045"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zFN-Mg-KDJ">
+                                <rect key="frame" x="65" y="508" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">An airplane is a modern aircraft that enables fast and efficient travel across cities and countries. Philippine Airlines, the country’s flag carrier, is known for its world-class service, hospitality, and safety standards. With a vast network of domestic and international routes, it connects the Philippines to the rest of the world. Passengers experience comfort, in-flight entertainment, and the warmth of Filipino service while traveling at high altitudes across great distances.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Airplane" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHB-eb-hgh">
+                                <rect key="frame" x="405" y="150" width="193" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Ng-Y1-iqg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uGZ-1O-LaU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mS9-Aa-3vB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2982" y="-873"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vJ8-5l-jwH">
+            <objects>
+                <viewController id="pxd-A8-sfZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCp-6N-THL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="airballon-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="Ib9-hc-uqm">
+                                <rect key="frame" x="-80" y="195" width="1331" height="1045"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8Sy-xU-KeE">
+                                <rect key="frame" x="84" y="484" width="873" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A hot air balloon is a large aircraft that floats in the sky by heating air inside a colorful fabric envelope, lifting a basket that carries passengers. It provides a calm and scenic aerial experience, allowing riders to enjoy breathtaking panoramic views of landscapes, valleys, and cities below. Hot air ballooning is often associated with adventure, romance, and the beauty of flight without noise or engines. It’s a timeless way to appreciate nature from above.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hot Air Balloon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYB-9S-dJN">
+                                <rect key="frame" x="335" y="143" width="355" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nvk-fY-bUc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rQm-uV-yl0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cid-SH-hCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.78125" y="-873.20644216691062"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fvd-jS-a8q">
@@ -225,8 +728,17 @@
     <resources>
         <image name="airballon-removebg-preview" width="259" height="194"/>
         <image name="bg" width="1024" height="1024"/>
+        <image name="bicycle" width="612" height="408"/>
+        <image name="civic" width="624" height="351"/>
+        <image name="jet-ski" width="300" height="223"/>
         <image name="jetplanne-removebg-preview" width="646" height="386"/>
         <image name="plane-removebg-preview" width="641" height="360"/>
+        <image name="truck" width="629" height="397"/>
+        <image name="yacht-removebg-preview" width="662" height="377"/>
+        <image name="yakay" width="500" height="500"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
